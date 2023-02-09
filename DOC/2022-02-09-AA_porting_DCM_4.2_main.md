@@ -4,6 +4,6 @@ In order to use XIOS3_beta that has been released in 2022, we need to take a mor
 
 List of the differences between 4.2 NEMOREF & DRAKKAR to port :
 
-| routine | how to port |
+| routine | difference | 
 |--|--|
-| makenemo | copy from ref |
+| makenemo | ho to make the list of CPPkeys | 
