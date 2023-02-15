@@ -56,7 +56,7 @@ Then with dcm_cmpfile -d we extract from DRAKKAR the changes we want to port and
 
 
 | routine | ported ? |
-|--|--|--|
+|--|--|
 | icedia.F90 |  |
 | icerst.F90 |  |
 | icestp.F90 | |
@@ -100,7 +100,7 @@ Then with dcm_cmpfile -d we extract from DRAKKAR the changes we want to port and
 
 
 | routine | ported ? |
-|--|--|--|
+|--|--|
 | icedia.F90 |  |
 | icerst.F90 |  |
 | icestp.F90 | |
