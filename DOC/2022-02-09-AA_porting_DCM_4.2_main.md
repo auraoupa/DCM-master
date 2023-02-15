@@ -3,11 +3,11 @@
 In order to use XIOS3_beta that has been released in 2022, we need to take a more recent version of NEMO than 4.2 branch.
 We are going to port the DRAKKAR customs to NEMO version commit=389a917643f84804f6c7c6cb61c33007bc9a7b20.
 
-## List of the differences between 4.2 NEMOREF & DRAKKAR to port :
+## List of the differences between 4.2 NEMOREF & DRAKKAR  :
 
-| routine | difference | porting |
+| routine | difference | to be ported |
 |--|--|--|
-| makenemo | how to make the list of CPPkeys | not ported |
+| makenemo | how to make the list of CPPkeys | no |
 | icedia.F90 | set trends to 0 if not found in restart file | yes |
 | icerst.F90 | change in name of restart/output (path) | yes |
 | icestp.F90 | change in name of restart/output (path) | yes |
@@ -49,4 +49,95 @@ We are going to port the DRAKKAR customs to NEMO version commit=389a917643f84804
 | stpmlf.F90 | product diagnostics (uT, vS etc.) | yes |
 | timing.F90 | allow for longer times | yes |
 
+## Port the changes
 
+In the eORCA05.L121-JZAA015 experiment, we import from nemoref all the files to be ported with dcm_getfile command.
+Then with dcm_cmpfile -d we extract from DRAKKAR the changes we want to port and modify them if needed.
+
+
+| routine | ported ? |
+|--|--|--|
+| icedia.F90 |  |
+| icerst.F90 |  |
+| icestp.F90 | |
+| diaar5.F90 |  |
+| diaprod.F90 |  |
+| domain.F90 |  |
+| dommsk.F90 |  |
+| dtatsd.F90 |  |
+| icb_oce.F90 |  |
+| icbclv.F90 |  |
+| icbini.F90 |  |
+| icbrst.F90 |  |
+| icbstp.F90 |  |
+| icbtrj.F90 |  |
+| in_out_manager.F90 |  |
+| iom.F90 |  |
+| restart.F90 |  |
+| isf_oce.F90 |  |
+| isfpar.F90 |  |
+| isfparmit.F90 |  |
+| isfstp.F90 |  |
+| lib_mpp.F90 |  |
+| diaobs.F90 |  |
+| obs_profiles_def.F90 |  |
+| obs_readmdt.F90 |  |
+| obs_surf_def.F90 |  |
+| obs_write.F90 |  |
+| sbcblk.F90 |  |
+| sbcfwb.F90 |  |
+| sbcrnf.F90 |  |
+| sbcssr.F90 |  |
+| shapiro.F90 |  |
+| trabbl.F90  |  |
+| usrdef_fmask.F90 |  |
+| zdfdrg.F90 |  |
+| nemogcm.F90 |  |
+| step.F90 |  |
+| step_oce.F90 |  |
+| stpmlf.F90 |  |
+| timing.F90 |  |
+
+
+| routine | ported ? |
+|--|--|--|
+| icedia.F90 |  |
+| icerst.F90 |  |
+| icestp.F90 | |
+| diaar5.F90 |  |
+| diaprod.F90 |  |
+| domain.F90 |  |
+| dommsk.F90 |  |
+| dtatsd.F90 |  |
+| icb_oce.F90 |  |
+| icbclv.F90 |  |
+| icbini.F90 |  |
+| icbrst.F90 |  |
+| icbstp.F90 |  |
+| icbtrj.F90 |  |
+| in_out_manager.F90 |  |
+| iom.F90 |  |
+| restart.F90 |  |
+| isf_oce.F90 |  |
+| isfpar.F90 |  |
+| isfparmit.F90 |  |
+| isfstp.F90 |  |
+| lib_mpp.F90 |  |
+| diaobs.F90 |  |
+| obs_profiles_def.F90 |  |
+| obs_readmdt.F90 |  |
+| obs_surf_def.F90 |  |
+| obs_write.F90 |  |
+| sbcblk.F90 |  |
+| sbcfwb.F90 |  |
+| sbcrnf.F90 |  |
+| sbcssr.F90 |  |
+| shapiro.F90 |  |
+| trabbl.F90  |  |
+| usrdef_fmask.F90 |  |
+| zdfdrg.F90 |  |
+| nemogcm.F90 |  |
+| step.F90 |  |
+| step_oce.F90 |  |
+| stpmlf.F90 |  |
+| timing.F90 |  |
