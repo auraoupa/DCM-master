@@ -27,7 +27,7 @@ We are going to port the DRAKKAR customs to NEMO version commit=389a917643f84804
 | restart.F90 | change in name of restart/output (path) | yes |
 | isf_oce.F90 | allow for multiple ice shelf input files with different frequency | yes |
 | isfpar.F90 | allow for multiple ice shelf input files with different frequency | yes |
-| isfparmit.F90 | allow for multiple ice shelf input files with different frequency | yes |
+| isfparmlt.F90 | allow for multiple ice shelf input files with different frequency | yes |
 | isfstp.F90 | allow for multiple ice shelf input files with different frequency | yes |
 | lib_mpp.F90 | change in name of restart/output (path) | yes |
 | diaobs.F90 | change in name of restart/output (path) | yes |
@@ -57,39 +57,39 @@ Then with dcm_cmpfile -d we extract from DRAKKAR the changes we want to port and
 
 | routine | ported ? |
 |--|--|
-| icedia.F90 |  |
-| icerst.F90 |  |
-| icestp.F90 | |
-| diaar5.F90 |  |
-| diaprod.F90 |  |
-| domain.F90 |  |
-| dommsk.F90 |  |
-| dtatsd.F90 |  |
-| icb_oce.F90 |  |
-| icbclv.F90 |  |
-| icbini.F90 |  |
-| icbrst.F90 |  |
-| icbstp.F90 |  |
-| icbtrj.F90 |  |
-| in_out_manager.F90 |  |
-| iom.F90 |  |
-| restart.F90 |  |
-| isf_oce.F90 |  |
-| isfpar.F90 |  |
-| isfparmit.F90 |  |
-| isfstp.F90 |  |
-| lib_mpp.F90 |  |
-| diaobs.F90 |  |
-| obs_profiles_def.F90 |  |
-| obs_readmdt.F90 |  |
-| obs_surf_def.F90 |  |
-| obs_write.F90 |  |
-| sbcblk.F90 |  |
-| sbcfwb.F90 |  |
-| sbcrnf.F90 |  |
-| sbcssr.F90 |  |
-| shapiro.F90 |  |
-| trabbl.F90  |  |
+| icedia.F90 | done |
+| icerst.F90 | done |
+| icestp.F90 |done |
+| diaar5.F90 | done |
+| diaprod.F90 | copied entirely |
+| domain.F90 | done |
+| dommsk.F90 | done |
+| dtatsd.F90 | done |
+| icb_oce.F90 | done |
+| icbclv.F90 | done |
+| icbini.F90 | done |
+| icbrst.F90 | done |
+| icbstp.F90 | done |
+| icbtrj.F90 |done  |
+| in_out_manager.F90 | done |
+| iom.F90 | done |
+| restart.F90 | done |
+| isf_oce.F90 | done |
+| isfpar.F90 | another name for the dummy variable ji ? (already used) |
+| isfparmlt.F90 | adapted to enter the DO loop and change of variable name |
+| isfstp.F90 | done |
+| lib_mpp.F90 | done |
+| diaobs.F90 | done |
+| obs_profiles_def.F90 | done |
+| obs_readmdt.F90 | done |
+| obs_surf_def.F90 | done |
+| obs_write.F90 | done |
+| sbcblk.F90 | replace nn_hls by 0 in DO_2D( nn_hls, nn_hls, nn_hls, nn_hls ) like in the rest ? |
+| sbcfwb.F90 | done |
+| sbcrnf.F90 | done |
+| sbcssr.F90 | done |
+| shapiro.F90 | copied entirely |
+| trabbl.F90  | replace mi0(ii0) par mi0(ii0,nn_hls) like in the rest ?|
 | usrdef_fmask.F90 |  |
 | zdfdrg.F90 |  |
 | nemogcm.F90 |  |
@@ -120,7 +120,7 @@ Then with dcm_cmpfile -d we extract from DRAKKAR the changes we want to port and
 | restart.F90 |  |
 | isf_oce.F90 |  |
 | isfpar.F90 |  |
-| isfparmit.F90 |  |
+| isfparmlt.F90 |  |
 | isfstp.F90 |  |
 | lib_mpp.F90 |  |
 | diaobs.F90 |  |
