@@ -8,7 +8,7 @@ We are going to port the DRAKKAR customs to NEMO version commit=389a917643f84804
 | routine | difference | porting |
 |--|--|--|
 | makenemo | how to make the list of CPPkeys | not ported |
-| icedia.F90 |--|--|
+| icedia.F90 | set trends to 0 if not found in restart file | yes |
 | icerst.F90 |--|--|
 | icestp.F90 |--|--|
 | diaar5.F90 |--|--|
@@ -48,5 +48,5 @@ We are going to port the DRAKKAR customs to NEMO version commit=389a917643f84804
 | step_oce.F90 |--|--|
 | stpmlf.F90 |--|--|
 | timing.F90 |--|--|
-|-- |--|--|
+
 
