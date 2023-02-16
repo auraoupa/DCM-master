@@ -60,7 +60,7 @@ Then with dcm_cmpfile -d we extract from DRAKKAR the changes we want to port and
 | icedia.F90 | done |
 | icerst.F90 | done |
 | icestp.F90 |done |
-| diaar5.F90 | done |
+| diaar5.F90 | changed name for zbotpres, zgdept, replace ln_zps by l_zps, modify CALL eos |
 | diaprod.F90 | copied entirely |
 | domain.F90 | done |
 | dommsk.F90 | done |
@@ -84,7 +84,7 @@ Then with dcm_cmpfile -d we extract from DRAKKAR the changes we want to port and
 | obs_readmdt.F90 | done |
 | obs_surf_def.F90 | done |
 | obs_write.F90 | done |
-| sbcblk.F90 | modified zwu(:,:) by loop, replace nn_hls by 0 in DO_2D( nn_hls, nn_hls, nn_hls, nn_hls ) like in the rest ? |
+| sbcblk.F90 | modified zwu(:,:) by loop, add init ztau_ij, replace zztmp1 by zztmp |
 | sbcfwb.F90 | done |
 | sbcrnf.F90 | done |
 | sbcssr.F90 | done |
