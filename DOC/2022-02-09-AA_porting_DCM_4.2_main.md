@@ -90,7 +90,7 @@ Then with dcm_cmpfile -d we extract from DRAKKAR the changes we want to port and
 | sbcssr.F90 | done |
 | shapiro.F90 | copied entirely |
 | trabbl.F90  | done |
-| usrdef_fmask.F90 | replace mi0(ii0) par mi0(ii0,nn_hls) like in the rest ? |
+| usrdef_fmask.F90 | replaced mi0(ii0) par mi0(ii0,nn_hls) |
 | zdfdrg.F90 | done |
 | nemogcm.F90 | done |
 | step.F90 | no more stepf.F90 in NEMOREF ??  |
